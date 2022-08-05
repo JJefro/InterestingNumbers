@@ -15,6 +15,10 @@
 		975B9F67287477E40017B397 /* Representable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B9F66287477E40017B397 /* Representable.swift */; };
 		975B9F6A287479440017B397 /* ApplyableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B9F69287479440017B397 /* ApplyableProtocol.swift */; };
 		97D2D0A92871E99C002286A6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2D0A82871E99C002286A6 /* R.generated.swift */; };
+		97F03B3C288C4D4D00C7339F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97F03B3B288C4D4D00C7339F /* Localizable.strings */; };
+		97F03B3E288C540200C7339F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F03B3D288C530D00C7339F /* OpenSans-Bold.ttf */; };
+		97F03B40288C54A300C7339F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F03B3F288C54A300C7339F /* OpenSans-Light.ttf */; };
+		97F03B42288DA8C100C7339F /* DicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F03B41288DA8C100C7339F /* DicesView.swift */; };
 		A9EDD14CB62D526DD2A1D4C3 /* InterestingNumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EDD59DCF503144DF691D92 /* InterestingNumbersTests.swift */; };
 		A9EDD304890F0B8059AD117A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9EDD1A04B83A7FDEC38FCF5 /* OpenSans-Regular.ttf */; };
 		A9EDD5594C2A956090A1D3B7 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EDD78B28041A474A026AF4 /* MainFlow.swift */; };
@@ -56,6 +60,10 @@
 		975B9F66287477E40017B397 /* Representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representable.swift; sourceTree = "<group>"; };
 		975B9F69287479440017B397 /* ApplyableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyableProtocol.swift; sourceTree = "<group>"; };
 		97D2D0A82871E99C002286A6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		97F03B3B288C4D4D00C7339F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		97F03B3D288C530D00C7339F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		97F03B3F288C54A300C7339F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		97F03B41288DA8C100C7339F /* DicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicesView.swift; sourceTree = "<group>"; };
 		A9EDD1A04B83A7FDEC38FCF5 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		A9EDD1B0AEBACBB3A612D5DC /* InterestingNumbersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingNumbersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9EDD3568F2573A24966962A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				975B9F6028746CEA0017B397 /* MainContentView.swift */,
+				97F03B41288DA8C100C7339F /* DicesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 			children = (
 				A9EDDC6E51A6046C5118E5AE /* Fonts */,
 				A9EDDC7DC2A13D824A28E4AB /* Assets.xcassets */,
+				97F03B3B288C4D4D00C7339F /* Localizable.strings */,
 				97D2D0A82871E99C002286A6 /* R.generated.swift */,
 			);
 			path = Resources;
@@ -245,7 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				A9EDD6C93FDD8B4999083512 /* OpenSans-SemiBold.ttf */,
+				97F03B3F288C54A300C7339F /* OpenSans-Light.ttf */,
 				A9EDD1A04B83A7FDEC38FCF5 /* OpenSans-Regular.ttf */,
+				97F03B3D288C530D00C7339F /* OpenSans-Bold.ttf */,
 				A9EDD3568F2573A24966962A /* OpenSans-ExtraBold.ttf */,
 			);
 			path = Fonts;
@@ -363,6 +375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9EDD87A93E794A201DD53F5 /* Assets.xcassets in Resources */,
+				97F03B3E288C540200C7339F /* OpenSans-Bold.ttf in Resources */,
+				97F03B40288C54A300C7339F /* OpenSans-Light.ttf in Resources */,
+				97F03B3C288C4D4D00C7339F /* Localizable.strings in Resources */,
 				A9EDD5FFA2069FE9BA6F8A3F /* LaunchScreen.storyboard in Resources */,
 				A9EDDD0F85E74017E24C0A8C /* OpenSans-SemiBold.ttf in Resources */,
 				A9EDD304890F0B8059AD117A /* OpenSans-Regular.ttf in Resources */,
@@ -551,6 +566,7 @@
 				A9EDD5594C2A956090A1D3B7 /* MainFlow.swift in Sources */,
 				A9EDDA9411230B924B955BAC /* MainViewController.swift in Sources */,
 				975B9F6128746CEA0017B397 /* MainContentView.swift in Sources */,
+				97F03B42288DA8C100C7339F /* DicesView.swift in Sources */,
 				975B9F6A287479440017B397 /* ApplyableProtocol.swift in Sources */,
 				975B9F6328746E6E0017B397 /* MainViewModel.swift in Sources */,
 			);
@@ -783,6 +799,7 @@
 				INFOPLIST_FILE = InterestingNumbers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -810,6 +827,7 @@
 				INFOPLIST_FILE = InterestingNumbers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

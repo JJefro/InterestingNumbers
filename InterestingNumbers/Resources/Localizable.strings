@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  InterestingNumbers
+
+  Created by Jevgenijs Jefrosinins on 23/07/2022.
+  
+*/
+
+/*
+ Main content view
+ */
+"displayButton_title" = "Display Fact";
+"mainView_title" = "Interesting Numbers";
+"mainView_description" = "This App about facts of Numbers and Dates";
+"mainView_textfield_title" = "Enter here";
