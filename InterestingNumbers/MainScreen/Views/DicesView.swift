@@ -26,21 +26,13 @@ class DicesView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        bgColor.setFill()
-        UIRectFill(rect)
+        bgColor.setFill(); UIRectFill(rect)
         guard let context = UIGraphicsGetCurrentContext() else { return }
         let dices = [getDiceWithNumberOnePath(), getDiceWithNumberFivePath()]
-
-        for dice in dices {
-            dice.lineWidth = bounds.width / 30
-        }
+        dices.forEach { $0.lineWidth = bounds.width / 30 }
         context.setFillColor(dicesBgColor.cgColor)
         context.setStrokeColor(dicesTintColor.cgColor)
-        for dice in dices {
-            dice.fill()
-            dice.stroke()
-        }
+        dices.forEach { $0.fill(); $0.stroke() }
     }
 }
 
@@ -51,10 +43,14 @@ private extension DicesView {
             xPosition: bounds.midX,
             yPosition: bounds.midY
         )
-        let centralCirclePoint = CGPoint(x: bounds.maxX - (bounds.midX / 2), y: bounds.maxY - (bounds.maxY / 4))
-        dicePath.append(getCirclePath(arcCenter: centralCirclePoint))
-        dicePath.apply(CGAffineTransform(translationX: -bounds.width / 60,
-                                         y: -bounds.width / 60))
+        dicePath.append(getCirclePath(arcCenter: CGPoint(
+            x: bounds.maxX - bounds.midX / 2,
+            y: bounds.maxY - bounds.maxY / 4))
+        )
+        dicePath.apply(CGAffineTransform(
+            translationX: -bounds.width / 60,
+            y: -bounds.width / 60)
+        )
         return dicePath
     }
 
@@ -64,8 +60,8 @@ private extension DicesView {
             yPosition: bounds.minY
         )
         let leftPositionX = bounds.midX / 4
-        let rightPositionX = bounds.midX - (bounds.midX / 4)
-        let bottomPositionY = bounds.midY - (bounds.midY / 4)
+        let rightPositionX = bounds.midX - bounds.midX / 4
+        let bottomPositionY = bounds.midY - bounds.midY / 4
         let topPositionY = bounds.midY / 4
         let centerPosition = CGPoint(x: bounds.midX / 2, y: bounds.midY / 2)
 
@@ -80,8 +76,10 @@ private extension DicesView {
             arcCenter: CGPoint(x: rightPositionX, y: bottomPositionY)))
 
         dicePath.apply(CGAffineTransform(rotationAngle: .pi / 4))
-        dicePath.apply(CGAffineTransform(translationX: bounds.width / 2.7,
-                                         y: bounds.height / 7))
+        dicePath.apply(CGAffineTransform(
+            translationX: bounds.width / 2.7,
+            y: bounds.height / 7)
+        )
         return dicePath
     }
 
