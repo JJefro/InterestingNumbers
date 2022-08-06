@@ -10,7 +10,7 @@ import SnapKit
 
 protocol MainContentViewProtocol: UIView {}
 
-class MainContentView: UIView, MainContentViewProtocol {
+final class MainContentView: UIView, MainContentViewProtocol {
 
     private let titleLabel = UILabel().apply {
         $0.text = R.string.localizable.mainView_title()
@@ -26,8 +26,8 @@ class MainContentView: UIView, MainContentViewProtocol {
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
-    private let dicesView = DicesView(dicesTintColor: R.color.dicesImageBG()!,
-                                      dicesBgColor: R.color.mainViewBG()!,
+    private let dicesView = DicesView(dicesTintColor: R.color.dicesTintColor()!,
+                                      dicesBgColor: R.color.dicesBgColor()!,
                                       backgroundColor: R.color.mainViewBG()!
     )
     override init(frame: CGRect) {
@@ -35,7 +35,6 @@ class MainContentView: UIView, MainContentViewProtocol {
         addViews()
         configure()
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -43,13 +42,11 @@ class MainContentView: UIView, MainContentViewProtocol {
 
 // MARK: - Add Views
 private extension MainContentView {
-
     func addViews() {
         addTitleLabel()
         addDescriptionLabel()
         addDicesView()
     }
-
     func addTitleLabel() {
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
@@ -57,7 +54,6 @@ private extension MainContentView {
             $0.centerX.equalToSuperview()
         }
     }
-
     func addDescriptionLabel() {
         addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints {
@@ -65,7 +61,6 @@ private extension MainContentView {
             $0.leading.trailing.equalToSuperview().inset(66)
         }
     }
-
     func addDicesView() {
         addSubview(dicesView)
         dicesView.snp.makeConstraints {
@@ -76,7 +71,6 @@ private extension MainContentView {
         }
     }
 }
-
 // MARK: - Configurations
 private extension MainContentView {
 

@@ -11,7 +11,7 @@ protocol MainViewModelProtocol {
     init(network: NetworkManagerProtocol)
 }
 
-class MainViewModel: MainViewModelProtocol {
+final class MainViewModel: MainViewModelProtocol {
 
     private let network: NetworkManagerProtocol
     
