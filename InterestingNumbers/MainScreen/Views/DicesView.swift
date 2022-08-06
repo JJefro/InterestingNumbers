@@ -10,12 +10,14 @@ import Foundation
 class DicesView: UIView {
 
     private let dicesTintColor: UIColor
+    private let dicesBgColor: UIColor
     private let bgColor: UIColor
     private let cornerRadius: CGFloat = 15
 
-    init(dicesTintColor: UIColor, bgColor: UIColor) {
+    init(dicesTintColor: UIColor, dicesBgColor: UIColor, backgroundColor: UIColor) {
         self.dicesTintColor = dicesTintColor
-        self.bgColor = bgColor
+        self.dicesBgColor = dicesBgColor
+        self.bgColor = backgroundColor
         super.init(frame: .zero)
     }
 
@@ -24,24 +26,39 @@ class DicesView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-        addDiceWithNumberOne()
-        addDiceWithNumberFive()
+        super.draw(rect)
+        bgColor.setFill()
+        UIRectFill(rect)
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        let dices = [getDiceWithNumberOnePath(), getDiceWithNumberFivePath()]
+
+        for dice in dices {
+            dice.lineWidth = bounds.width / 30
+        }
+        context.setFillColor(dicesBgColor.cgColor)
+        context.setStrokeColor(dicesTintColor.cgColor)
+        for dice in dices {
+            dice.fill()
+            dice.stroke()
+        }
     }
 }
 
-// MARK: - Private Methods
+// MARK: - Dices UIBezierPath
 private extension DicesView {
-    func addDiceWithNumberOne() {
+    func getDiceWithNumberOnePath() -> UIBezierPath {
         let dicePath = getRoundedRectanglePath(
             xPosition: bounds.midX,
             yPosition: bounds.midY
         )
         let centralCirclePoint = CGPoint(x: bounds.maxX - (bounds.midX / 2), y: bounds.maxY - (bounds.maxY / 4))
         dicePath.append(getCirclePath(arcCenter: centralCirclePoint))
-        addShapeLayer(with: dicePath)
+        dicePath.apply(CGAffineTransform(translationX: -bounds.width / 60,
+                                         y: -bounds.width / 60))
+        return dicePath
     }
 
-    func addDiceWithNumberFive() {
+    func getDiceWithNumberFivePath() -> UIBezierPath {
         let dicePath = getRoundedRectanglePath(
             xPosition: bounds.minX,
             yPosition: bounds.minY
@@ -62,14 +79,14 @@ private extension DicesView {
         dicePath.append(getCirclePath(
             arcCenter: CGPoint(x: rightPositionX, y: bottomPositionY)))
 
-        let translation = CGAffineTransform(translationX: bounds.width / 3, y: bounds.height / 6)
         dicePath.apply(CGAffineTransform(rotationAngle: .pi / 4))
-        dicePath.apply(translation)
-        addShapeLayer(with: dicePath)
+        dicePath.apply(CGAffineTransform(translationX: bounds.width / 2.7,
+                                         y: bounds.height / 7))
+        return dicePath
     }
 
     func getRoundedRectanglePath(xPosition: CGFloat, yPosition: CGFloat) -> UIBezierPath {
-        return UIBezierPath(
+        UIBezierPath(
             roundedRect: CGRect(
                 x: xPosition,
                 y: yPosition,
@@ -81,26 +98,17 @@ private extension DicesView {
     }
 
     func getCirclePath(arcCenter: CGPoint) -> UIBezierPath {
-        let circlePath = UIBezierPath(
+        UIBezierPath(
             arcCenter: arcCenter,
             radius: bounds.width / 60,
             startAngle: 0,
             endAngle: 2 * .pi,
             clockwise: true
         )
-        return circlePath
-    }
-
-    func addShapeLayer(with path: UIBezierPath) {
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        shapeLayer.lineWidth = bounds.width / 30
-        shapeLayer.fillColor = bgColor.cgColor
-        shapeLayer.strokeColor = dicesTintColor.cgColor
-        layer.addSublayer(shapeLayer)
     }
 }
 
+// MARK: - PreviewProvider
 #if DEBUG
 #if canImport(SwiftUI)
 import SwiftUI
@@ -108,13 +116,14 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct DicesViewRepresentablePreview: PreviewProvider {
     static var previews: some View {
-        Representable(view: DicesView(dicesTintColor: .black, bgColor: .red))
-            .frame(
-                width: 350,
-                height: 350,
-                alignment: .center
-            )
-            .previewLayout(.sizeThatFits)
+        Representable(view: DicesView(dicesTintColor: .black, dicesBgColor: .red, backgroundColor: .white))
+        .frame(
+            width: 350,
+            height: 350,
+            alignment: .center
+        )
+        .previewLayout(.sizeThatFits)
+        .preferredColorScheme(.light)
     }
 }
 #endif
