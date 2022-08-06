@@ -26,10 +26,10 @@ class MainContentView: UIView, MainContentViewProtocol {
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
-
     private let dicesView = DicesView(dicesTintColor: R.color.dicesImageBG()!,
-                                      bgColor: R.color.mainViewBG()!)
-
+                                      dicesBgColor: R.color.mainViewBG()!,
+                                      backgroundColor: R.color.mainViewBG()!
+    )
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
