@@ -19,6 +19,5 @@ struct Representable: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIView, context: Context) {}
 }
-
 #endif
 #endif
