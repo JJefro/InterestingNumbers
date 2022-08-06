@@ -7,8 +7,15 @@
 
 import Foundation
 
-protocol MainViewModelProtocol {}
+protocol MainViewModelProtocol {
+    init(network: NetworkManagerProtocol)
+}
 
 class MainViewModel: MainViewModelProtocol {
 
+    private let network: NetworkManagerProtocol
+    
+    required init(network: NetworkManagerProtocol) {
+        self.network = network
+    }
 }

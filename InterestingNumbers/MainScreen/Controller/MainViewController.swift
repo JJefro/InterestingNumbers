@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MainViewController<ContentView: MainContentViewProtocol>: UIViewController {
+final class MainViewController<ContentView: MainContentViewProtocol, ViewModel>: UIViewController where ViewModel: MainViewModelProtocol {
 
-    let contentView: ContentView
-    let viewModel: MainViewModelProtocol
+    private let contentView: ContentView
+    private let viewModel: ViewModel
 
-    init(viewModel: MainViewModelProtocol) {
-        self.viewModel = viewModel
+    init() {
+        self.viewModel = ViewModel(network: NetworkManager())
         self.contentView = ContentView()
         super.init(nibName: nil, bundle: nil)
     }

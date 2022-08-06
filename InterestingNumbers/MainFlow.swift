@@ -6,25 +6,17 @@ import UIKit
 
 class MainFlow {
     private var window: UIWindow?
-
+    
     init(window: UIWindow?) {
         self.window = window
     }
-
+    
     func launch() {
-        let mainViewController = configureMainViewController()
+        let mainViewController = MainViewController<MainContentView, MainViewModel>()
         let navigationController = configureNavigationController(rootViewController: mainViewController)
-
+        
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-    }
-}
-
-// MARK: - ViewControllers Configurations
-private extension MainFlow {
-    func configureMainViewController() -> UIViewController {
-        let viewModel = MainViewModel()
-        return MainViewController<MainContentView>(viewModel: viewModel)
     }
 }
 
