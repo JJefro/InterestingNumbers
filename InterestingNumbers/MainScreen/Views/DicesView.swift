@@ -49,7 +49,7 @@ private extension DicesView {
         )
         dicePath.apply(CGAffineTransform(
             translationX: -bounds.width / 60,
-            y: -bounds.width / 60)
+            y: -bounds.width / 10)
         )
         return dicePath
     }
@@ -77,8 +77,8 @@ private extension DicesView {
 
         dicePath.apply(CGAffineTransform(rotationAngle: .pi / 4))
         dicePath.apply(CGAffineTransform(
-            translationX: bounds.width / 2.7,
-            y: bounds.height / 7)
+            translationX: bounds.width / 2.85,
+            y: bounds.height / 12)
         )
         return dicePath
     }
@@ -114,14 +114,18 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct DicesViewRepresentablePreview: PreviewProvider {
     static var previews: some View {
-        Representable(view: DicesView(dicesTintColor: .black, dicesBgColor: .red, backgroundColor: .white))
+        ForEach(ColorScheme.allCases, id: \.self, content:
+        Representable(view: DicesView(dicesTintColor: R.color.dicesTintColor()!,
+                                      dicesBgColor: R.color.dicesBgColor()!,
+                                      backgroundColor: R.color.mainViewBG()!
+                                     ))
         .frame(
             width: 350,
             height: 350,
             alignment: .center
         )
         .previewLayout(.sizeThatFits)
-        .preferredColorScheme(.light)
+        .preferredColorScheme)
     }
 }
 #endif

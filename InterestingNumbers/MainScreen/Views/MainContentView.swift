@@ -86,13 +86,15 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct MainContentViewRepresentablePreview: PreviewProvider {
     static var previews: some View {
-        Representable(view: MainContentView())
+        ForEach(ColorScheme.allCases, id: \.self, content:
+                    Representable(view: MainContentView())
             .frame(
                 width: UIScreen.main.bounds.width,
-                height: UIScreen.main.bounds.height,
-                alignment: .center
+                height: UIScreen.main.bounds.height
             )
-            .previewLayout(.sizeThatFits)
+                .previewLayout(.sizeThatFits)
+                .preferredColorScheme
+        )
     }
 }
 #endif
