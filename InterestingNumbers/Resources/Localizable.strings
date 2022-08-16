@@ -13,3 +13,11 @@
 "mainView_title" = "Interesting Numbers";
 "mainView_description" = "This App about facts of Numbers and Dates";
 "mainView_textfield_title" = "Enter here";
+
+/*
+ Network errors
+ */
+"networkError_unknownURL" = "Invalid URL";
+"networkError_unknownServerResponse" = "Check your internet connection";
+"networkError_unknownStatusCode" = "Can't get data from the server";
+"networkError_noDataReceived" = "No data was received from the server";
