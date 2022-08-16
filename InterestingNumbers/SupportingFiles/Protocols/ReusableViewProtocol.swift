@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol ReusableViewProtocol {
+    static var identifier: String { get }
+}
+
+extension ReusableViewProtocol {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
