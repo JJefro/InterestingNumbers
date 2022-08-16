@@ -26,15 +26,17 @@ final class MainContentView: UIView, MainContentViewProtocol {
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
-    private let dicesView = DicesView(dicesTintColor: R.color.dicesTintColor()!,
-                                      dicesBgColor: R.color.dicesBgColor()!,
-                                      backgroundColor: R.color.mainViewBG()!
-    )
+    private let dicesView = DicesView(backgroundColor: R.color.mainViewBG()!).apply {
+        $0.backgroundDiceNumber = 1
+        $0.foregroundDiceNumber = 4
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
         configure()
     }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -47,6 +49,7 @@ private extension MainContentView {
         addDescriptionLabel()
         addDicesView()
     }
+
     func addTitleLabel() {
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
@@ -54,6 +57,7 @@ private extension MainContentView {
             $0.centerX.equalToSuperview()
         }
     }
+
     func addDescriptionLabel() {
         addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints {
@@ -61,6 +65,7 @@ private extension MainContentView {
             $0.leading.trailing.equalToSuperview().inset(66)
         }
     }
+
     func addDicesView() {
         addSubview(dicesView)
         dicesView.snp.makeConstraints {
