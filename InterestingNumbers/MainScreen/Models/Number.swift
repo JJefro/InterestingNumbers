@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Number: RawRepresentable {
+    var rawValue: String
+}
