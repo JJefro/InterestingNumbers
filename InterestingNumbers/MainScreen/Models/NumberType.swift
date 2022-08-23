@@ -8,8 +8,5 @@
 import Foundation
 
 enum NumberType: String, CaseIterable {
-    case defaultType = "trivia"
-    case math = "math"
-    case date = "date"
-    case year = "year"
+    case trivia, math, date, year
 }
