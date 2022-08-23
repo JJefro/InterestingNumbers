@@ -10,7 +10,7 @@ import Foundation
 protocol MainViewModelProtocol {
     init(network: NetworkManagerProtocol)
     
-    func fetchData(number: Int)
+    func fetchDescription(for: Number)
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -21,7 +21,7 @@ final class MainViewModel: MainViewModelProtocol {
     }
 
     public var onStateChanges: ((State) -> Void)?
-    private var currentNumberType: NumberType = .defaultType
+    private var currentNumberType: NumberType = .trivia
 
     private let network: NetworkManagerProtocol
     
@@ -29,13 +29,15 @@ final class MainViewModel: MainViewModelProtocol {
         self.network = network
     }
 
-    func update(number: Int, type: NumberType) {
+    func update(number: Number, type: NumberType) {
         currentNumberType = type
-        fetchData(number: number)
+        fetchDescription(for: number)
     }
 
-    func fetchData(number: Int) {
-        network.performRequest(by: getURLComponents(by: number).url) { [weak self] result in
+    func fetchDescription(for number: Number) {
+        guard number.rawValue.isNumber() else { return }
+        let request = NumberRequest(number: number.rawValue, type: currentNumberType)
+        network.perform(request: request) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(entity):
@@ -45,15 +47,5 @@ final class MainViewModel: MainViewModelProtocol {
                 self.onStateChanges?(.onErrorOccured(error))
             }
         }
-    }
-}
-
-// MARK: - Private Methods
-private extension MainViewModel {
-
-    func getURLComponents(by number: Int) -> URLComponents {
-        var numberURLComponents = Constants.Components.numbersURLComponents
-        numberURLComponents.path = "/\(number)/\(currentNumberType.rawValue)"
-        return numberURLComponents
     }
 }
