@@ -7,16 +7,14 @@
 
 import Foundation
 
-protocol EntityProtocol: Equatable {
-    init(data: NumberModel)
-}
+protocol EntityProtocol {}
 
 struct NumberEntity: EntityProtocol {
     let description: String
-    let number: String
+    let number: Number
 
     init(data: NumberModel) {
-        self.description = data.response
-        self.number = String(describing: data.number)
+        self.description = data.found ? data.response : "No such number was found"
+        self.number = Number(rawValue: String(describing: data.number))
     }
 }
