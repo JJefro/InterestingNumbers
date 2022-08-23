@@ -8,20 +8,19 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func performRequest(by url: URL?, completion: @escaping (Result<NumberEntity, Error>) -> Void)
+    func perform<Request: DataRequest>(request: Request, completion: @escaping (Result<Request.Entity, Error>) -> Void)
 }
 
 class NetworkManager: NetworkManagerProtocol {
 
-    func performRequest(by url: URL?, completion: @escaping (Result<NumberEntity, Error>) -> Void) {
-        guard let url = url else {
+    func perform<Request: DataRequest>(request: Request, completion: @escaping (Result<Request.Entity, Error>) -> Void) {
+        guard let url = request.url else {
             completion(.failure(NetworkError.unknownURL))
             return
         }
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, response, error in
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
+            DispatchQueue.main.async {
                 if let error = error { completion(.failure(error)) }
                 guard let response = response as? HTTPURLResponse else {
                     completion(.failure(NetworkError.unknownServerResponse))
@@ -35,19 +34,9 @@ class NetworkManager: NetworkManagerProtocol {
                     completion(.failure(NetworkError.unknownStatusCode))
                     return
                 }
-                completion(self.parseJSON(data: data))
+                completion(request.decode(data))
             }
         }
         task.resume()
-    }
-
-    private func parseJSON(data: Data) -> Result<NumberEntity, Error> {
-        let decoder = JSONDecoder()
-        do {
-            let decoderData = try decoder.decode(NumberModel.self, from: data)
-            return .success(NumberEntity(data: decoderData))
-        } catch {
-            return .failure(error)
-        }
     }
 }
