@@ -35,6 +35,6 @@ final class MainViewController<ContentView: MainContentViewProtocol, ViewModel: 
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.fetchDescription(for: Number(rawValue: "100"))
+        viewModel.fetchDescription(for: Number(rawValue: "10042423423423423"))
     }
 }

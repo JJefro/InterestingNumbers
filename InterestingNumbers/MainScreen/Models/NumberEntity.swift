@@ -14,7 +14,7 @@ struct NumberEntity: EntityProtocol {
     let number: Number
 
     init(data: NumberModel) {
-        self.description = data.found ? data.response : "No such number was found"
+        self.description = data.found ? data.response : "No interesting facts were found for this number"
         self.number = Number(rawValue: String(describing: data.number))
     }
 }
