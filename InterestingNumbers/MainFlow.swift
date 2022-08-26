@@ -5,33 +5,24 @@
 import UIKit
 
 class MainFlow {
-    private var window: UIWindow?
-
+    private(set) lazy var presentationController = configureNavigationController()
+    
     init(window: UIWindow?) {
-        self.window = window
-    }
-
-    func launch() {
-        let mainViewController = configureMainViewController()
-        let navigationController = configureNavigationController(rootViewController: mainViewController)
-
-        window?.rootViewController = navigationController
+        window?.rootViewController = presentationController
         window?.makeKeyAndVisible()
     }
-}
-
-// MARK: - ViewControllers Configurations
-private extension MainFlow {
-    func configureMainViewController() -> UIViewController {
-        let viewModel = MainViewModel()
-        return MainViewController<MainContentView>(viewModel: viewModel)
+    
+    func launch() {
+        presentationController.setViewControllers([
+            MainViewController(network: NetworkManager())
+        ], animated: true)
     }
 }
 
 // MARK: - NavigationController Configurations
 private extension MainFlow {
-    func configureNavigationController(rootViewController: UIViewController) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: rootViewController)
+    func configureNavigationController() -> UINavigationController {
+        let navigationController = UINavigationController()
         if #available(iOS 13, *) {
             let barAppearance = UINavigationBarAppearance()
             barAppearance.titleTextAttributes = [NSAttributedString.Key.font: R.font.openSansRegular(size: 15)!]

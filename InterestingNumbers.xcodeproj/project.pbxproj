@@ -15,6 +15,24 @@
 		975B9F67287477E40017B397 /* Representable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B9F66287477E40017B397 /* Representable.swift */; };
 		975B9F6A287479440017B397 /* ApplyableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975B9F69287479440017B397 /* ApplyableProtocol.swift */; };
 		97D2D0A92871E99C002286A6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2D0A82871E99C002286A6 /* R.generated.swift */; };
+		97D5B13128AD6303006298D7 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B13028AD6303006298D7 /* DataRequest.swift */; };
+		97D5B13428AD67B7006298D7 /* NumberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B13328AD67B7006298D7 /* NumberRequest.swift */; };
+		97D5B13628B4EF19006298D7 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B13528B4EF19006298D7 /* Number.swift */; };
+		97D5B13828B4F152006298D7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B13728B4F152006298D7 /* String+Extensions.swift */; };
+		97F03B3C288C4D4D00C7339F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97F03B3B288C4D4D00C7339F /* Localizable.strings */; };
+		97F03B3E288C540200C7339F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F03B3D288C530D00C7339F /* OpenSans-Bold.ttf */; };
+		97F03B40288C54A300C7339F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F03B3F288C54A300C7339F /* OpenSans-Light.ttf */; };
+		97F03B42288DA8C100C7339F /* DicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F03B41288DA8C100C7339F /* DicesView.swift */; };
+		97FDFBC8289E819700E20A99 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBC7289E819700E20A99 /* NetworkManager.swift */; };
+		97FDFBCB28A1081E00E20A99 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBCA28A1081E00E20A99 /* ReusableViewProtocol.swift */; };
+		97FDFBCD28A1084F00E20A99 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBCC28A1084F00E20A99 /* UICollectionView+Extensions.swift */; };
+		97FDFBCF28A1086900E20A99 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBCE28A1086900E20A99 /* UICollectionViewCell+Extensions.swift */; };
+		97FDFBD228A125F500E20A99 /* NumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBD128A125F500E20A99 /* NumberType.swift */; };
+		97FDFBD628A12BD000E20A99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBD528A12BD000E20A99 /* Constants.swift */; };
+		97FDFBD828A13CB700E20A99 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBD728A13CB700E20A99 /* NetworkError.swift */; };
+		97FDFBDA28A13EE000E20A99 /* NumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBD928A13EE000E20A99 /* NumberModel.swift */; };
+		97FDFBDC28A1A0B400E20A99 /* NumberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBDB28A1A0B400E20A99 /* NumberEntity.swift */; };
+		97FDFBDE28A932C500E20A99 /* UIBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FDFBDD28A932C500E20A99 /* UIBezierPath+Extensions.swift */; };
 		A9EDD14CB62D526DD2A1D4C3 /* InterestingNumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EDD59DCF503144DF691D92 /* InterestingNumbersTests.swift */; };
 		A9EDD304890F0B8059AD117A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9EDD1A04B83A7FDEC38FCF5 /* OpenSans-Regular.ttf */; };
 		A9EDD5594C2A956090A1D3B7 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EDD78B28041A474A026AF4 /* MainFlow.swift */; };
@@ -56,6 +74,24 @@
 		975B9F66287477E40017B397 /* Representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representable.swift; sourceTree = "<group>"; };
 		975B9F69287479440017B397 /* ApplyableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyableProtocol.swift; sourceTree = "<group>"; };
 		97D2D0A82871E99C002286A6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		97D5B13028AD6303006298D7 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		97D5B13328AD67B7006298D7 /* NumberRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberRequest.swift; sourceTree = "<group>"; };
+		97D5B13528B4EF19006298D7 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		97D5B13728B4F152006298D7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		97F03B3B288C4D4D00C7339F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		97F03B3D288C530D00C7339F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		97F03B3F288C54A300C7339F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		97F03B41288DA8C100C7339F /* DicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicesView.swift; sourceTree = "<group>"; };
+		97FDFBC7289E819700E20A99 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		97FDFBCA28A1081E00E20A99 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		97FDFBCC28A1084F00E20A99 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		97FDFBCE28A1086900E20A99 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		97FDFBD128A125F500E20A99 /* NumberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberType.swift; sourceTree = "<group>"; };
+		97FDFBD528A12BD000E20A99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		97FDFBD728A13CB700E20A99 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		97FDFBD928A13EE000E20A99 /* NumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberModel.swift; sourceTree = "<group>"; };
+		97FDFBDB28A1A0B400E20A99 /* NumberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEntity.swift; sourceTree = "<group>"; };
+		97FDFBDD28A932C500E20A99 /* UIBezierPath+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Extensions.swift"; sourceTree = "<group>"; };
 		A9EDD1A04B83A7FDEC38FCF5 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		A9EDD1B0AEBACBB3A612D5DC /* InterestingNumbersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingNumbersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9EDD3568F2573A24966962A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -119,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				975B9F6028746CEA0017B397 /* MainContentView.swift */,
+				97F03B41288DA8C100C7339F /* DicesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +163,10 @@
 		975B9F642874727C0017B397 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				97FDFBCC28A1084F00E20A99 /* UICollectionView+Extensions.swift */,
+				97FDFBCE28A1086900E20A99 /* UICollectionViewCell+Extensions.swift */,
+				97FDFBDD28A932C500E20A99 /* UIBezierPath+Extensions.swift */,
+				97D5B13728B4F152006298D7 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				975B9F69287479440017B397 /* ApplyableProtocol.swift */,
+				97FDFBCA28A1081E00E20A99 /* ReusableViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -151,6 +193,7 @@
 			children = (
 				A9EDDC6E51A6046C5118E5AE /* Fonts */,
 				A9EDDC7DC2A13D824A28E4AB /* Assets.xcassets */,
+				97F03B3B288C4D4D00C7339F /* Localizable.strings */,
 				97D2D0A82871E99C002286A6 /* R.generated.swift */,
 			);
 			path = Resources;
@@ -162,8 +205,47 @@
 				975B9F68287479310017B397 /* Protocols */,
 				975B9F642874727C0017B397 /* Extensions */,
 				A9EDDED2DCABF453B2AFB2FE /* LaunchScreen.storyboard */,
+				97FDFBD528A12BD000E20A99 /* Constants.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		97D5B13228AD64FC006298D7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				97D5B13028AD6303006298D7 /* DataRequest.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		97FDFBC6289E818200E20A99 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				97FDFBC9289E819C00E20A99 /* Network */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		97FDFBC9289E819C00E20A99 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				97D5B13228AD64FC006298D7 /* Protocols */,
+				97FDFBC7289E819700E20A99 /* NetworkManager.swift */,
+				97D5B13328AD67B7006298D7 /* NumberRequest.swift */,
+				97FDFBD728A13CB700E20A99 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		97FDFBD028A125E600E20A99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97FDFBD128A125F500E20A99 /* NumberType.swift */,
+				97FDFBD928A13EE000E20A99 /* NumberModel.swift */,
+				97FDFBDB28A1A0B400E20A99 /* NumberEntity.swift */,
+				97D5B13528B4EF19006298D7 /* Number.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		99FDF2D84E92DA8432DC4828 /* Pods */ = {
@@ -214,6 +296,7 @@
 			children = (
 				A9EDDE942DD6B3B2F0ADAFB7 /* AppDelegate.swift */,
 				A9EDD78B28041A474A026AF4 /* MainFlow.swift */,
+				97FDFBC6289E818200E20A99 /* Managers */,
 				975B9F65287477CE0017B397 /* Models */,
 				A9EDDA51FAA3020AC63C3153 /* MainScreen */,
 				97D2D0A62871E8B8002286A6 /* Resources */,
@@ -226,6 +309,7 @@
 		A9EDDA51FAA3020AC63C3153 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				97FDFBD028A125E600E20A99 /* Models */,
 				975B9F5E28746CBB0017B397 /* Views */,
 				A9EDDC2101016973570999FE /* Controller */,
 			);
@@ -245,7 +329,9 @@
 			isa = PBXGroup;
 			children = (
 				A9EDD6C93FDD8B4999083512 /* OpenSans-SemiBold.ttf */,
+				97F03B3F288C54A300C7339F /* OpenSans-Light.ttf */,
 				A9EDD1A04B83A7FDEC38FCF5 /* OpenSans-Regular.ttf */,
+				97F03B3D288C530D00C7339F /* OpenSans-Bold.ttf */,
 				A9EDD3568F2573A24966962A /* OpenSans-ExtraBold.ttf */,
 			);
 			path = Fonts;
@@ -363,6 +449,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9EDD87A93E794A201DD53F5 /* Assets.xcassets in Resources */,
+				97F03B3E288C540200C7339F /* OpenSans-Bold.ttf in Resources */,
+				97F03B40288C54A300C7339F /* OpenSans-Light.ttf in Resources */,
+				97F03B3C288C4D4D00C7339F /* Localizable.strings in Resources */,
 				A9EDD5FFA2069FE9BA6F8A3F /* LaunchScreen.storyboard in Resources */,
 				A9EDDD0F85E74017E24C0A8C /* OpenSans-SemiBold.ttf in Resources */,
 				A9EDD304890F0B8059AD117A /* OpenSans-Regular.ttf in Resources */,
@@ -545,13 +634,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D5B13428AD67B7006298D7 /* NumberRequest.swift in Sources */,
+				97FDFBCF28A1086900E20A99 /* UICollectionViewCell+Extensions.swift in Sources */,
+				97FDFBD828A13CB700E20A99 /* NetworkError.swift in Sources */,
 				A9EDD619D45D15D77C06030E /* AppDelegate.swift in Sources */,
 				97D2D0A92871E99C002286A6 /* R.generated.swift in Sources */,
+				97FDFBDE28A932C500E20A99 /* UIBezierPath+Extensions.swift in Sources */,
+				97FDFBC8289E819700E20A99 /* NetworkManager.swift in Sources */,
 				975B9F67287477E40017B397 /* Representable.swift in Sources */,
+				97FDFBD628A12BD000E20A99 /* Constants.swift in Sources */,
 				A9EDD5594C2A956090A1D3B7 /* MainFlow.swift in Sources */,
 				A9EDDA9411230B924B955BAC /* MainViewController.swift in Sources */,
+				97FDFBDC28A1A0B400E20A99 /* NumberEntity.swift in Sources */,
+				97D5B13128AD6303006298D7 /* DataRequest.swift in Sources */,
 				975B9F6128746CEA0017B397 /* MainContentView.swift in Sources */,
+				97FDFBD228A125F500E20A99 /* NumberType.swift in Sources */,
+				97F03B42288DA8C100C7339F /* DicesView.swift in Sources */,
+				97D5B13628B4EF19006298D7 /* Number.swift in Sources */,
+				97FDFBDA28A13EE000E20A99 /* NumberModel.swift in Sources */,
+				97FDFBCD28A1084F00E20A99 /* UICollectionView+Extensions.swift in Sources */,
+				97D5B13828B4F152006298D7 /* String+Extensions.swift in Sources */,
 				975B9F6A287479440017B397 /* ApplyableProtocol.swift in Sources */,
+				97FDFBCB28A1081E00E20A99 /* ReusableViewProtocol.swift in Sources */,
 				975B9F6328746E6E0017B397 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,8 +887,9 @@
 				INFOPLIST_FILE = InterestingNumbers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,8 +915,9 @@
 				INFOPLIST_FILE = InterestingNumbers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,12 +8,18 @@
 
 import UIKit
 
-class MainViewController<ContentView: MainContentViewProtocol>: UIViewController {
+extension MainViewController where ViewModel == MainViewModel, ContentView == MainContentView {
+    convenience init(network: NetworkManagerProtocol) {
+        self.init(viewModel: MainViewModel(network: network))
+    }
+}
 
-    let contentView: ContentView
-    let viewModel: MainViewModelProtocol
+final class MainViewController<ContentView: MainContentViewProtocol, ViewModel: MainViewModelProtocol>: UIViewController {
 
-    init(viewModel: MainViewModelProtocol) {
+    private let contentView: ContentView
+    private let viewModel: ViewModel
+
+    init(viewModel: ViewModel) {
         self.viewModel = viewModel
         self.contentView = ContentView()
         super.init(nibName: nil, bundle: nil)
@@ -25,5 +31,10 @@ class MainViewController<ContentView: MainContentViewProtocol>: UIViewController
 
     override func loadView() {
         view = contentView
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchDescription(for: Number(rawValue: "10042423423423423"))
     }
 }

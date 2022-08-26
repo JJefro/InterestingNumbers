@@ -18,6 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainFlow = MainFlow(window: window)
         mainFlow.launch()
-    return true
+        return true
     }
 }
